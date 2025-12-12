@@ -2,10 +2,10 @@
 <html lang="vi">
 
 <head>
-    <title>Đăng nhập Admin - Hải Phương Mobile</title>
+    <title>Đăng nhập Admin - Thanh Bình Mobile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Trang đăng nhập quản trị viên Hải Phương Mobile" />
+    <meta name="description" content="Trang đăng nhập quản trị viên Thanh Bình Mobile" />
     <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
@@ -34,34 +34,41 @@
 
                 <div class="rounded-md -space-y-px">
                     <div class="mb-5">
-                        <label for="admusername" class="block text-sm font-medium text-gray-700 mb-1">Tên đăng nhập</label>
-                        <input id="admusername" name="admusername" type="text" class="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Tên đăng nhập">
+                        <label for="admusername" class="block text-sm font-medium text-gray-700 mb-1">Tên đăng
+                            nhập</label>
+                        <input id="admusername" name="admusername" type="text"
+                            class="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Tên đăng nhập">
                         @error('admusername')
-                        <div class="text-red-600 text-sm mt-1">
-                            <strong>{{ $message }}</strong>
-                        </div>
+                            <div class="text-red-600 text-sm mt-1">
+                                <strong>{{ $message }}</strong>
+                            </div>
                         @enderror
                     </div>
 
                     <div>
                         <label for="admpassword" class="block text-sm font-medium text-gray-700 mb-1">Mật khẩu</label>
                         <div class="relative">
-                            <input id="admpassword" name="admpassword" type="password" class="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Mật khẩu">
-                            <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" onclick="togglePasswordVisibility('admpassword')">
+                            <input id="admpassword" name="admpassword" type="password"
+                                class="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                placeholder="Mật khẩu">
+                            <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                                onclick="togglePasswordVisibility('admpassword')">
                                 <i id="admpassword-toggle-icon" class="fas fa-eye text-gray-500"></i>
                             </span>
                         </div>
                         @error('admpassword')
-                        <div class="text-red-600 text-sm mt-1">
-                            <strong>{{ $message }}</strong>
-                        </div>
+                            <div class="text-red-600 text-sm mt-1">
+                                <strong>{{ $message }}</strong>
+                            </div>
                         @enderror
                     </div>
                 </div>
 
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <input id="remember" name="remember" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                        <input id="remember" name="remember" type="checkbox"
+                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
                         <label for="remember" class="ml-2 block text-sm text-gray-900">
                             Ghi nhớ đăng nhập
                         </label>
@@ -75,7 +82,8 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <button type="submit"
+                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <span class="absolute left-0 inset-y-0 flex items-center pl-3">
                             <i class="fas fa-sign-in-alt"></i>
                         </span>

@@ -15,25 +15,25 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Tạo người dùng mẫu
-        User::factory(10)->create(); 
-        
+        User::factory(10)->create();
+
         // Tạo tài khoản admin
         DB::table('users')->insert([
-            'fullname' => 'Đỗ Trần Anh Sơn',
-            'username' => 'asotaku205',
-            'phone' => '0926395770',
-            'email' => 'sonotaku555@gmail.com',
+            'fullname' => 'Thanh Bình',
+            'username' => 'thanhbinh',
+            'phone' => '0389480508',
+            'email' => 'thanhbinh58058@gmail.com',
             'password' => bcrypt('123456'),
         ]);
 
         DB::table('admin')->insert([
-            'admusername'=>'asotaku',
-            'admemail'=> '123@123.com',
-            'admpassword'=> bcrypt('123456'),
-            'admphone'=>'12312321',
+            'admusername' => 'thanhbinh',
+            'admemail' => 'thanhbinh58058@gmail.com',
+            'admpassword' => bcrypt('123456'),
+            'admphone' => '0389480508',
             'remember_token' => null,
         ]);
-        
+
         // Tạo danh mục cha theo thứ tự menu mới
         // 1. iPhone
         DB::table('category_product')->insert([
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'category_status' => 1,
             'parent_id' => null,
         ]);
-        
+
         // 2. Android
         DB::table('category_product')->insert([
             'category_name' => 'Android',
@@ -107,7 +107,7 @@ class DatabaseSeeder extends Seeder
             'category_status' => 1,
             'parent_id' => $iphone_id,
         ]);
-        
+
         // Thêm danh mục con cho Android
         DB::table('category_product')->insert([
             'category_name' => 'Samsung',
@@ -194,7 +194,7 @@ class DatabaseSeeder extends Seeder
             'category_status' => 1,
             'parent_id' => $tablet_id,
         ]);
-        
+
         // Thêm danh mục con cho phụ kiện
         DB::table('category_product')->insert([
             'category_name' => 'Tai nghe',
@@ -202,14 +202,14 @@ class DatabaseSeeder extends Seeder
             'category_status' => 1,
             'parent_id' => $accessory_id,
         ]);
-        
+
         DB::table('category_product')->insert([
             'category_name' => 'Sạc dự phòng',
             'category_description' => 'Các loại sạc dự phòng',
             'category_status' => 1,
             'parent_id' => $accessory_id,
         ]);
-        
+
         DB::table('category_product')->insert([
             'category_name' => 'Ốp lưng',
             'category_description' => 'Các loại ốp lưng điện thoại',

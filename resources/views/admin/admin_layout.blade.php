@@ -2,10 +2,10 @@
 <html lang="vi">
 
 <head>
-    <title>@yield('title', 'Hải Phương Mobile - Quản trị')</title>
+    <title>@yield('title', 'Thanh Bình Mobile - Quản trị')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="@yield('description', 'Trang quản trị Hải Phương Mobile')" />
+    <meta name="description" content="@yield('description', 'Trang quản trị Thanh Bình Mobile')" />
     <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
@@ -28,17 +28,21 @@
 <body class="bg-gray-100">
     <div class="flex h-screen overflow-hidden">
         <!-- Mobile sidebar overlay -->
-        <div id="mobile-sidebar-overlay" class="fixed inset-0 z-40 bg-gray-600 bg-opacity-50 transition-opacity duration-300 ease-linear lg:hidden opacity-0 pointer-events-none"></div>
-        
+        <div id="mobile-sidebar-overlay"
+            class="fixed inset-0 z-40 bg-gray-600 bg-opacity-50 transition-opacity duration-300 ease-linear lg:hidden opacity-0 pointer-events-none">
+        </div>
+
         <!-- Sidebar -->
-        <div id="mobile-sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-800 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0">
+        <div id="mobile-sidebar"
+            class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-800 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0">
             <div class="flex flex-col w-64 bg-gray-800">
                 <!-- Sidebar header -->
                 <div class="flex items-center justify-between h-16 px-4 bg-gray-900 text-white">
                     <a href="{{ route('admin_index') }}" class="flex-shrink-0 flex items-center">
-                        <span class="text-xl font-bold">HẢI PHƯƠNG MOBILE</span>
+                        <span class="text-xl font-bold">THANH BÌNH MOBILE</span>
                     </a>
-                    <button id="close-sidebar" class="lg:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600">
+                    <button id="close-sidebar"
+                        class="lg:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-600">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
@@ -68,12 +72,12 @@
                                         class="group flex items-center px-2 py-2 text-sm font-medium text-gray-300 rounded-md {{ request()->routeIs('add_category') ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
                                         Thêm danh mục sản phẩm
                                     </a>
-                                    
-                                        <a href="{{ route('category') }}"
-                                            class="group flex items-center px-2 py-2 text-sm font-medium text-gray-300 rounded-md {{ request()->routeIs('category') ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
-                                            Danh mục
-                                        </a>
-                                    
+
+                                    <a href="{{ route('category') }}"
+                                        class="group flex items-center px-2 py-2 text-sm font-medium text-gray-300 rounded-md {{ request()->routeIs('category') ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
+                                        Danh mục
+                                    </a>
+
                                 </div>
                             </div>
                             <div class="space-y-1">
@@ -88,12 +92,12 @@
                                         class="group flex items-center px-2 py-2 text-sm font-medium text-gray-300 rounded-md {{ request()->routeIs('add_product') ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
                                         Thêm Sản Phẩm
                                     </a>
-                                    
-                                        <a href="{{ route('product') }}"
-                                            class="group flex items-center px-2 py-2 text-sm font-medium text-gray-300 rounded-md {{ request()->routeIs('product') ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
-                                            Sản Phẩm
-                                        </a>
-                                    
+
+                                    <a href="{{ route('product') }}"
+                                        class="group flex items-center px-2 py-2 text-sm font-medium text-gray-300 rounded-md {{ request()->routeIs('product') ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white' }}">
+                                        Sản Phẩm
+                                    </a>
+
                                 </div>
                             </div>
 
@@ -128,14 +132,15 @@
         <div class="flex flex-col flex-1 overflow-hidden">
             <!-- Top bar -->
             <div class="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
-                <button type="button" id="mobile-menu-button" class="px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden">
+                <button type="button" id="mobile-menu-button"
+                    class="px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden">
                     <i class="fas fa-bars"></i>
                 </button>
 
                 <!-- Search bar -->
                 <div class="flex-1 px-4 flex justify-between">
                     <div class="flex-1 flex">
-                        
+
                     </div>
 
                     <!-- User dropdown -->

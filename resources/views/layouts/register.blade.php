@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
-    <title>Đăng Ký - Hai Phuong Mobile</title>
+    <title>Đăng Ký - Thanh Bình Mobile</title>
     @vite('resources/css/app.css')
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -159,7 +159,7 @@
 
         <!-- Hình ảnh - Cột phải -->
         <div class="hidden lg:block lg:w-1/2 overflow-hidden">
-            <img src="{{ asset('pic/cuahang.jpg') }}" alt="Workspace" class="h-screen w-full object-cover">
+            <img src="{{ asset('pic/cuahang.jpg?v=' . time()) }}" alt="Workspace" class="h-screen w-full object-cover">
         </div>
     </div>
 

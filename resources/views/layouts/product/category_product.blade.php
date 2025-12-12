@@ -2,9 +2,9 @@
 
 @section('title')
 @if(isset($category) && $category)
-    {{ $category->category_name . ' - Hải Phương Mobile' }}
+    {{ $category->category_name . ' - Thanh Bình Mobile' }}
 @else
-    Danh mục không tồn tại - Hải Phương Mobile
+    Danh mục không tồn tại - Thanh Bình Mobile
 @endif
 @endsection
 

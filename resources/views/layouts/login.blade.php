@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
-    <title>Hai Phuong Mobile</title>
+    <title>Thanh Bình Mobile</title>
     @vite('resources/css/app.css')
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -39,7 +39,7 @@
 
                     </div>
                     @error('login_identifier')
-                    
+
                         <div class="text-red-700 mb-2">
                             <strong class="font-bold italic">{{ $message }}</strong>
                         </div>
@@ -49,13 +49,14 @@
                         <div class="relative">
                             <input type="password" id="password" name="password"
                                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-white">
-                            <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" onclick="togglePasswordVisibility('password')">
+                            <span class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
+                                onclick="togglePasswordVisibility('password')">
                                 <i id="password-toggle-icon" class="fas fa-eye text-gray-500"></i>
                             </span>
                         </div>
                     </div>
                     @error('password')
-                    
+
                         <div class="text-red-700 mb-2">
                             <strong class="font-bold italic">{{ $message }}</strong>
                         </div>
@@ -113,7 +114,7 @@
 
         <!-- Hình ảnh - Cột phải -->
         <div class="hidden lg:block lg:w-1/2 overflow-hidden">
-            <img src="{{ asset('pic/cuahang.jpg') }}" alt="Workspace" class="h-screen w-full object-cover">
+            <img src="{{ asset('pic/cuahang.jpg?v=' . time()) }}" alt="Workspace" class="h-screen w-full object-cover">
         </div>
     </div>
 
@@ -122,7 +123,7 @@
         function togglePasswordVisibility(inputId) {
             const passwordInput = document.getElementById(inputId);
             const toggleIcon = document.getElementById(inputId + '-toggle-icon');
-            
+
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
                 toggleIcon.classList.remove('fa-eye');
